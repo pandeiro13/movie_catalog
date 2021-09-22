@@ -17,11 +17,12 @@ export default () => {
             setMovieList(list);
 
             //here we will grab the highlighted movie that will appear on the top of the screen
-            let highlighted = list.filter(h => h.slug === 'trending'); //we are filtering the list of the movies so that the higlighted movie will always be from the trending movies and we do it by filtering by the slug property
+            let highlighted = list.filter(h => h.slug === 'series'); //we are filtering the list of the movies so that the higlighted movie will always be from the series category and we do it by filtering by the slug property
             let randomMovie = Math.floor(Math.random() * (highlighted[0].items.results.length - 1));
             let chosen = highlighted[0].items.results[randomMovie];
-
-            console.log(chosen)
+            // console.log(chosen)
+            let chosenInfo = await tmdb.getMovieInfo(chosen.id, 'tv');
+            setHighlightedData(chosenInfo)
 
         }
         loadAll();

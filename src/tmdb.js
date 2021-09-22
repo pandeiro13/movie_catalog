@@ -13,6 +13,11 @@ export default {
     getFirstList: async () => {
         return [
             {
+                slug: 'series',
+                title: 'Series',
+                items: await simpleFetch(`/discover/tv?with_network=213&?language=en-US&api_key=${API_KEY}`)
+            },
+            {
                 slug: 'upcoming',
                 title: 'Upcoming',
                 items: await simpleFetch(`/movie/upcoming?language=en-US&api_key=${API_KEY}`)
@@ -39,7 +44,7 @@ export default {
             },
             {
                 slug: 'horror',
-                title: 'horror',
+                title: 'Horror',
                 items: await simpleFetch(`/discover/movie?with_genres=27&language=en-US&api_key=${API_KEY}`)
             },
             {
@@ -56,7 +61,23 @@ export default {
     },
 
     //function to grab info from one specific movie or series. type specifies whether it's a movie or series
-    getMovieInfo: async (movieId, type) => {
+    getMovieInfo: async (showID, type) => {
+        let info = {};
 
+        if(showID) { //if the movie/series has an ID
+            switch (type) { //if the type is a movie, we want to request the info of that movie. if it is a series, we want to request that series' info
+                case 'movie':
+                    info = await simpleFetch(`/movie/${showID}?language=en-US&api_key=${API_KEY}`);
+                break;
+                case 'tv':
+                    info = await simpleFetch(`/tv/${showID}?language=en-US&api_key=${API_KEY}`);
+                break;
+                default:
+                    info = null
+                break;
+            }
+        }
+
+        return info
     }
 }
