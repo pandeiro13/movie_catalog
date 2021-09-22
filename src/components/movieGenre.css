@@ -1,0 +1,32 @@
+.slidingListGeneral {
+    margin-bottom: 25px;
+}
+
+.slidingListGeneral h2 {
+    margin: 0px 0px 0px 40px;
+}
+
+.slidingListArea {
+    overflow-x: hidden;
+    padding-left: 15px;
+}
+
+.slidingListItself {
+    width: 99999999999999999999px;
+}
+
+.slidingListItem {
+    display: inline-block;
+    width: 200px;
+}
+
+.slidingListItem img {
+    width: 100%; /* the images will ocupy 100% of the area assigned to each of them (which is 150px) */
+    /*padding-right: 15px; - padding is not good because the image retains its relative size to the area assigned to it (100%) and when we hover over it to make it bigger (whit the block of code below), we will have to make its size bigger than 100%, and obviously that will be horrible*/
+    transform: scale(0.9);
+    transition: all ease 0.3s;
+}
+
+.slidingListItem img:hover{
+    transform: scale(1);
+}
