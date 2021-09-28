@@ -1,3 +1,9 @@
 .highlightedMovie {
     height: 100vh;
 }
+
+.highlightedBackground {
+    height: inherit;
+    width: inherit;
+    background: linear-gradient(to top, rgb(2, 85, 85), transparent);
+}
