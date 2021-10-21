@@ -8,16 +8,17 @@
 
 .slidingListArea {
     overflow-x: hidden;
-    padding-left: 15px;
+    /* padding-left: 40px;  */
 }
 
 .slidingListItself {
-    width: 99999999999999999999px;
+    transition: all ease 0.5s;
 }
 
 .slidingListItem {
     display: inline-block;
     width: 200px;
+    cursor: pointer;
 }
 
 .slidingListItem img {
@@ -29,4 +30,36 @@
 
 .slidingListItem img:hover{
     transform: scale(1);
+}
+
+.navigateLeft, .navigateRight {
+    position: absolute;
+    width: 60px;
+    height: 304px;
+    background-color: #4400b1cc;
+    z-index: 99; /* it has to be less than 999 because that's the header's z-index*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.navigateLeft {
+    left: 0;
+}
+
+.navigateRight {
+    right: 0;
+}
+
+.slidingListGeneral:hover .navigateRight, .slidingListGeneral:hover .navigateLeft {
+    opacity: 1;
+}
+
+@media (max-width: 760px) {
+    .navigateLeft, .navigateRight {
+        opacity: 1;
+    }
 }

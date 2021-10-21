@@ -2,8 +2,109 @@
     height: 100vh;
 }
 
-.highlightedBackground {
-    height: inherit;
+.highlightedBackgroundVertical {
+    height: inherit; /*inherits the height from the .highlightedMovie */
     width: inherit;
-    background: linear-gradient(to top, rgb(2, 85, 85), transparent);
+    background: linear-gradient(to top, #6200ff, transparent, transparent);
+}
+
+.highlightedBackgroundHorizontal {
+    height: inherit; /*inherits the height from the .highlightedMovie */
+    width: inherit;
+    background: linear-gradient(to right, #6200ff 20%, transparent 80%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* padding-left: 40px; */
+    padding-bottom: 150px;
+    padding-top: 70px; /*we need some free space on the top of the page for header (logo and profile pic of the user)*/
+}
+
+.highlightedName {
+    font-size: 50px;
+    font-weight: bold;
+    margin-left: 40px;
+}
+
+.highlightedInfo {
+    font-size: 25px;
+    margin-top: 10px;
+    margin-left: 40px;
+}
+
+.highlightedSynopsis {
+    color: lavender;
+    margin-left: 40px;
+    max-width: 25%;
+    /* text-align: justify; */
+    margin-top: 7px;
+}
+
+.highlightedButtons {
+    margin-top: 20px;
+    margin-left: 40px;
+}
+
+.addButton, .watchButton {
+    color: #f5f5dc;
+    background: none;
+    border: solid beige;
+    margin-right: 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 5px;
+    display: inline-block;
+    font-size: 25px;
+}
+
+.addButton {
+    border-radius: 100px;
+    /* width: 50px;
+    height: 50px; */
+    /* padding-left: 14px;
+    font-size: 27px; */
+    background-color: beige;
+    color: #6200ff;
+}
+
+.addButton:hover {
+    background-color: #6200ff;
+    color: beige;
+}
+
+.watchButton:hover {
+    background-color: beige;
+    color: #6200ff;
+}
+
+@media (max-width: 760px) {
+    .highlightedMovie {
+        height: 95vh;
+    }
+
+    .highlightedName {
+        font-size: 40px;
+        margin-right: 40px;
+    }
+
+    .highlightedInfo{
+        font-size: 16px;
+        margin-right: 40px;
+    }
+
+    .highlightedSynopsis {
+        font-size: 14px;
+        max-width: 100%;
+        margin-right: 40px;
+    }
+
+    .addButton, .watchButton {
+        font-size: 16px;
+    }
+
+    .highlightedGenres {
+        font-size: 14px;
+    }
+
+        
 }

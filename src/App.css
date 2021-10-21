@@ -8,8 +8,42 @@ font-family: 'Righteous', cursive;*/
 }
 
 body {
-    background-color: rgb(2, 85, 85);
-    color: rgb(255, 106, 0);
+    background-color: #6200ff;
+    color: beige;
     margin: 0;
     font-family: 'PT Sans', sans-serif;
+}
+
+.list {
+    margin-top: -150px;
+}
+
+footer {
+    text-align: center;
+    margin: 50px 0;
+}
+
+footer img {
+    height: 30px;
+}
+
+.loading {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 99;
+    background-color: rgb(68, 0, 177);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 760px) {
+    footer {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
 }

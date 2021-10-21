@@ -52,11 +52,11 @@ export default {
                 title: 'Romance',
                 items: await simpleFetch(`/discover/movie?with_genres=10749&language=en-US&api_key=${API_KEY}`)
             },
-            {
-                slug: 'documentaries',
-                title: 'Documentaries',
-                items: await simpleFetch(`/discover/movie?with_genres=99&language=en-US&api_key=${API_KEY}`)
-            },
+            // {
+            //     slug: 'documentaries',
+            //     title: 'Documentaries',
+            //     items: await simpleFetch(`/discover/movie?with_genres=99&language=en-US&api_key=${API_KEY}`)
+            // },
         ]
     },
 

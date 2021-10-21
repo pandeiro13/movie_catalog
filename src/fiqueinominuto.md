@@ -1,1 +1,1 @@
-FIQUEI NO MINUTO 1h30
+FIQUEI Nas 2h58 - eu acho que a página já está toda feita. ele ia agora falar de responsividade e depois ficou de corrigir a cena da sinopse
